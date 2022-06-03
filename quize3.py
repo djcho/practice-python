@@ -10,7 +10,10 @@ Quiz) 사이트별로 비밀번호를 만들어 주는 프로그램을 작성하
 '''
 
 url = "http://naver.com"
-my_str = url.replace("http://","")
-my_str = my_str[:my_str.index(".")]
+url = url.removeprefix("http://")
+my_str = url[:url.index(".")]
 password = my_str[:3] + str(len(my_str)) + str(my_str.count("e")) + "!"
-print("생성된 비밀번호 : " + password)
+
+print(password)
+
+
